@@ -35,7 +35,7 @@ var Git = {
         {
             if (oData.data.length  <1) return false;
 
-            oMe.sHtmlRepos.append('<h3>Total Public Repositories: ' + oData.data.length + '</h3>');
+            oMe.sHtmlRepos.append('<h3>Latest Public Repositories</h3>');
 
             $.each(oData.data, function (i, sVal)
             {
@@ -78,7 +78,7 @@ var Git = {
         {
             if (oData.data.length  <1) return false;
 
-            oMe.sHtmlGists.append('<h3>Total Public Gists: ' + oData.data.length + '</h3>');
+            oMe.sHtmlGists.append('<h3>Latest Public Gists</h3>');
 
             $.each(oData.data, function (i, sVal)
             {
