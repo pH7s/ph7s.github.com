@@ -16,25 +16,13 @@ var Git = {
     sHtmlGit: $('#git'),
     sHtmlRepos: $('#repos'),
     sHtmlGists: $('#gists'),
-    sHtmlBio: $('#bio'),
-    iTotalRepos: 0, // Default value
-    iTotalGists: 0, // Default value
+    sErrMsg: '<div class="warning_block"><p>Oops! An error occurred. Please try again later!</p></div>',
 
     // Constructor
     Git: function ()
     {
         oMe = this; // Self Object
-        this.sUsername = this.sHtmlGit.data('gituser'), // Get the GitHub Username
-
-        $.ajaxSetup({xhrFields: {withCredentials: true}, crossDomain: true});
-
-        $.getJSON(this.sApiUrl + this.sUsername + '?callback=?', function (oData)
-        {
-            oMe.iTotalRepos = oData.public_repos, oMe.iTotalGists = oData.public_gists;
-        }).error(function () {
-            oMe.sHtmlGit.append('<div class="warning_block"><p>Oops! An error occurred. Please try again later!</p></div>');
-        });
-
+        this.sUsername = this.sHtmlGit.data('gituser'); // Get the GitHub Username
 
         return this;
     },
@@ -45,9 +33,9 @@ var Git = {
 
         $.getJSON(this.sApiUrl + this.sUsername + '/repos' + sQueryUrl + '&callback=?', function (oData)
         {
-            oMe.sHtmlRepos.append('<h3>Total Public Repositories: ' + oMe.iTotalRepos + '</h3>');
+            if (oData.data.length  <1) return false;
 
-            if (oMe.iTotalRepos <1) return false;
+            oMe.sHtmlRepos.append('<h3>Total Public Repositories: ' + oData.data.length + '</h3>');
 
             $.each(oData.data, function (i, sVal)
             {
@@ -75,11 +63,12 @@ var Git = {
                     $(sHtml).fadeIn(450);
                 }
             })
+        }).error(function () {
+            oMe.sHtmlGit.append(oMe.sErrMsg);
         });
 
         return this;
     },
-
 
     gist: function ()
     {
@@ -87,9 +76,9 @@ var Git = {
 
         $.getJSON(this.sApiUrl + this.sUsername + '/gists' + sQueryUrl + '&callback=?', function (oData)
         {
-            oMe.sHtmlGists.append('<h3>Total Public Gists: ' + oMe.iTotalGists + '</h3>');
+            if (oData.data.length  <1) return false;
 
-            if (oMe.iTotalGists <1) return false;
+            oMe.sHtmlGists.append('<h3>Total Public Gists: ' + oData.data.length + '</h3>');
 
             $.each(oData.data, function (i, sVal)
             {
@@ -108,16 +97,8 @@ var Git = {
                     $(sHtml).fadeIn(450);
                 }
             })
-        });
-
-        return this;
-    },
-
-    bio: function ()
-    {
-        $.getJSON(this.sApiUrl + this.sUsername + '?callback=?', function (oData)
-        {
-            oMe.sHtmlBio.text(oData.bio);
+        }).error(function () {
+            oMe.sHtmlGit.append(oMe.sErrMsg);
         });
 
         return this;

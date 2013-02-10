@@ -12,7 +12,7 @@ document.getElementById('copyrightYear').innerHTML=(new Date).getFullYear(); // 
 // GitHub API
 jQuery(document).ready(function($)
 {
-    Git.Git().repos().gist().bio();
+    Git.Git().repos().gist();
 });
 
 /**
