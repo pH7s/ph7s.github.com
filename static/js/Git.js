@@ -26,7 +26,7 @@ var Git = {
         oMe = this; // Self Object
         this.sUsername = this.sHtmlGit.data('gituser'), // Get the GitHub Username
 
-        $.ajaxSetup({crossDomain: true});
+        $.ajaxSetup({xhrFields: {withCredentials: true}, crossDomain: true});
 
         $.getJSON(this.sApiUrl + this.sUsername, function (oData)
         {
