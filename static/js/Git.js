@@ -26,6 +26,8 @@ var Git = {
         oMe = this; // Self Object
         this.sUsername = this.sHtmlGit.data('gituser'), // Get the GitHub Username
 
+        $.ajaxSetup({crossDomain: true});
+
         $.getJSON(this.sApiUrl + this.sUsername, function (oData)
         {
             oMe.iTotalRepos = oData.public_repos, oMe.iTotalGists = oData.public_gists;
