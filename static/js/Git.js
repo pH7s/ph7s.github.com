@@ -28,7 +28,7 @@ var Git = {
 
         $.ajaxSetup({xhrFields: {withCredentials: true}, crossDomain: true});
 
-        $.getJSON(this.sApiUrl + this.sUsername, function (oData)
+        $.getJSON(this.sApiUrl + this.sUsername + '?callback=?', function (oData)
         {
             oMe.iTotalRepos = oData.public_repos, oMe.iTotalGists = oData.public_gists;
         }).error(function () {
@@ -115,7 +115,7 @@ var Git = {
 
     bio: function ()
     {
-        $.getJSON(this.sApiUrl + this.sUsername, function (oData)
+        $.getJSON(this.sApiUrl + this.sUsername + '?callback=?', function (oData)
         {
             oMe.sHtmlBio.text(oData.bio);
         });
