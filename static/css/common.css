@@ -149,11 +149,12 @@ aside {
   right: 0;
   position: fixed;
   padding: 1% 2% 10% 10%;
+  background: linear-gradient(100% 100% 90deg, #fff, #999);
   background: -moz-linear-gradient(100% 100% 90deg, #fff, #999);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#fff));
-  background: -webkit-linear-gradient(#999, #fff);
-  background: -o-linear-gradient(#999, #fff);
-  background: linear-gradient(100% 100% 90deg, #fff, #999);
+  background: -o-linear-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#fff));
+  background: -ms-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#fff));
+  background: -khtml-linear-gradient(100% 100% 90deg, #fff, #999);
 }
 
 aside #bio {
@@ -244,26 +245,30 @@ aside li a[href*="blog.hizup.com"] {
 .rollover img {
   width: 120px;
   height: 120px;
+  transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  -ms-transition :all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; z-index:0
+  -ms-transition: all 0.3s ease-in-out;
+  -khtml-transition: all 0.3s ease-in-out;
+  z-index: 0;
 }
 
 .rollover:hover > img {
   width: 140px;
   height: 140px;
-  transition: all 0.5s ease;
+  transform: scale(1.5,1.5);
   -webkit-transform: scale(1.5,1.5);
   -moz-transform: scale(1.5,1.5);
   -o-transform: scale(1.5,1.5);
   -ms-transform: scale(1.5,1.5);
-  transform: scale(1.5,1.5);
-  -webkit-transition: all 0.5s ease-out;
+  -khtml-transform: scale(1.5,1.5);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
   z-index: 999;
 }
 
