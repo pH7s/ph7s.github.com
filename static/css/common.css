@@ -181,6 +181,10 @@ aside li a[href*="about.me"] {
   background-image: url(https://s.aolcdn.com/aboutme/production129/images/icons/favicon.ico);
 }
 
+aside li a[href*="twitter.com"] {
+  background-image: url(http://si0.twimg.com/favicons/favicon.ico);
+}
+
 aside li a[href*="github.com"] {
   background-image: url(https://github.com/favicon.ico);
 }
