@@ -3,7 +3,7 @@
  * Description:     GitHub API | jQuery plugin
  *
  * Author:          Pierre-Henry Soria <ph7software@gmail.com>
- * Copyright:       (c) 2013, Pierre-Henry Soria. All Rights Reserved.
+ * Copyright:       (c) 2013-2015, Pierre-Henry Soria. All Rights Reserved.
  * License:         MIT License (http://opensource.org/licenses/mit-license.php)
  * Link:            http://github.com/pH-7
  */

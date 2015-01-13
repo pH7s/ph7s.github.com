@@ -1,6 +1,6 @@
 /**
  * Author:          Pierre-Henry Soria <ph7software@gmail.com>
- * Copyright:       (c) 2013, Pierre-Henry Soria. All Rights Reserved.
+ * Copyright:       (c) 2013-2015, Pierre-Henry Soria. All Rights Reserved.
  * License:         CC-BY - http://creativecommons.org/licenses/by/3.0/
  * Link:            http://github.com/pH-7
  */
@@ -22,7 +22,7 @@ jQuery(document).ready(function($)
 $('a').click(function()
 {
     var href = $(this).attr('href');
-    if (-1==href.indexOf('github.com') && (-1!=href.indexOf('http://') || -1!=href.indexOf('https://')))
+    if (-1==href.indexOf('github.com') && -1==href.indexOf('github.io') && -1==href.indexOf('ph7cms.com') && (-1!=href.indexOf('http://') || -1!=href.indexOf('https://')))
     {
         var host = href.substr(href.indexOf(':')+3);
         if (-1!=host.indexOf('/')) {

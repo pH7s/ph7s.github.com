@@ -1,6 +1,6 @@
 /**
  * @author      Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright   (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright   (c) 2012-2015, Pierre-Henry Soria. All Rights Reserved.
  * @license     CC-BY License - http://creativecommons.org/licenses/by/3.0/
  */
 
@@ -178,7 +178,7 @@ aside li a {
 }
 
 aside li a[href*="about.me"] {
-  background-image: url(https://s.aolcdn.com/aboutme/production115/images/icons/favicon.ico);
+  background-image: url(https://d2ed0w4q03gsmw.cloudfront.net/29d080f/images/icons/favicon.ico);
 }
 
 aside li a[href*="twitter.com"] {
