@@ -178,7 +178,7 @@ aside li a {
 }
 
 aside li a[href*="about.me"] {
-  background-image: url(https://d2ed0w4q03gsmw.cloudfront.net/29d080f/images/icons/favicon.ico);
+  background-image: url(https://cdn.about.me/images/icons/favicon/favicon.ico);
 }
 
 aside li a[href*="twitter.com"] {
@@ -201,8 +201,8 @@ aside li a[href*="sourceforge.net"] {
   background-image: url(https://sourceforge.net/favicon.ico);
 }
 
-aside li a[href*="blog.hizup.com"] {
-  background-image: url(http://blog.hizup.com/static/hizup/img/favicon.ico);
+aside li a[href*="ph7.me"] {
+  background-image: url(http://ph7.me/wp-content/themes/veecard/favicon.ico);
 }
 
 
