@@ -190,11 +190,11 @@ aside li a[href*="github.com"] {
 }
 
 aside li a[href*="phpclasses.org"] {
-  background-image: url(http://files.phpclasses.org/graphics/phpclasses/favicon.ico);
+  background-image: url(https://files.phpclasses.org/graphics/phpclasses/favicon.ico);
 }
 
 aside li a[href*="jsclasses.org"] {
-  background-image: url(http://files.jsclasses.org/graphics/jsclasses/favicon.ico);
+  background-image: url(https://files.jsclasses.org/graphics/jsclasses/favicon.ico);
 }
 
 aside li a[href*="sourceforge.net"] {
@@ -202,7 +202,7 @@ aside li a[href*="sourceforge.net"] {
 }
 
 aside li a[href*="ph7.me"] {
-  background-image: url(http://ph7.me/wp-content/themes/veecard/favicon.ico);
+  background-image: url(https://ph7.me/wp-content/themes/veecard/favicon.ico);
 }
 
 
